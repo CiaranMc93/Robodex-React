@@ -38,7 +38,7 @@ export class App extends Component {
 		getFilteredRobots(robots, query) {
 
 			return robots.filter(robot => {
-				return robot.name.includes(query.toLowerCase());
+				return robot.name.toLowerCase().includes(query.toLowerCase());
 
 			});
 		}
