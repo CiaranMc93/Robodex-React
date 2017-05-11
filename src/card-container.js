@@ -4,6 +4,8 @@ import {Card} from './card';
 import {CardList} from './cardList';
 import {SearchBar} from './search-bar';
 
+//this is the html for the card container
+//contains other components that we have built - search bar and cardlist
 export const CardContainer = ({robots, query, onSearch}) => (
 	<div className="flex flex-column vh-100 sans-serif">
 		<header className="pv4 bb tc">
@@ -19,6 +21,7 @@ export const CardContainer = ({robots, query, onSearch}) => (
 	</div>
 	);
 
+//variable used to render the robots using the card component we have created
 const renderRobots = (robots) => {
 	return robots.map(robot => (
 			<Card 
@@ -30,6 +33,7 @@ const renderRobots = (robots) => {
 			));
 };
 
+//define the property types so that we know what the data is/should be
 CardContainer.PropTypes = {
 	robots: PropTypes.array,
 	query: PropTypes.string,
